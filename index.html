@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,138 +7,96 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0b1e33;
-      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1f35;
+      color: white;
     }
 
     header {
-      background-color: #0b1e33;
+      background-color: #0b1f35;
       padding: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #1e3d5f;
+      text-align: center;
+      border-bottom: 4px solid #ff6b00;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    header h1 {
+      font-size: 2.5rem;
+      color: white;
+      margin: 0;
     }
 
-    .logo img {
-      height: 40px;
-    }
-
-    .logo span {
-      font-size: 1.5rem;
+    .subtitulo {
+      color: #ff6b00;
       font-weight: bold;
-      color: #f58220;
-    }
-
-    .intro {
-      padding: 2rem;
-      max-width: 800px;
-    }
-
-    .intro h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #ffffff;
-    }
-
-    .intro h1 span {
-      color: #f58220;
-    }
-
-    .intro p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .qr-section {
-      padding: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .qr-section img {
-      width: 120px;
-      height: 120px;
-    }
-
-    .qr-section div {
       font-size: 1.2rem;
-      font-weight: bold;
-      color: #f58220;
+      margin-top: 0.5rem;
     }
 
-    .catalogo {
-      padding: 2rem;
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
 
     .categoria {
-      margin-bottom: 2rem;
-    }
-
-    .categoria h2 {
-      color: #f58220;
-      border-bottom: 1px solid #f58220;
+      font-size: 1.5rem;
+      color: #ff6b00;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ff6b00;
       padding-bottom: 0.5rem;
     }
 
     .livro {
-      margin-left: 1rem;
-      margin-top: 0.5rem;
+      background-color: #102b4c;
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem;
+      border-left: 4px solid #ff6b00;
+      border-radius: 6px;
+    }
+
+    .livro:hover {
+      background-color: #1b3c5f;
     }
 
     footer {
-      margin-top: 2rem;
-      padding: 1rem;
       text-align: center;
-      font-size: 0.8rem;
-      color: #aaaaaa;
-      border-top: 1px solid #1e3d5f;
+      font-size: 0.85rem;
+      padding: 1rem;
+      background-color: #081828;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="logo-artesanal.png" alt="Logo Artesanal" />
-      <span>Biblioteca Artesanal</span>
-    </div>
+    <h1>📚 Catálogo de Livros</h1>
+    <div class="subtitulo">Biblioteca Artesanal Investimentos</div>
   </header>
 
-  <section class="intro">
-    <p>Os livros da Artesanal Investimentos, da sala de leitura, estão disponíveis para empréstimo aos colaboradores. Para solicitar o empréstimo, acesse o forms pelo QR code abaixo.</p>
-    <h1>Quer levar o livro? <span>Peça seu empréstimo aqui</span></h1>
-  </section>
+  <div class="container">
+    <div class="categoria">📘 Mercado Financeiro e Investimentos</div>
+    <div class="livro">Lucrando com os Tubarões – Newton Linchen / Tarcísio Peres</div>
+    <div class="livro">Processo Sancionador nos Mercados Financeiro e de Capitais – João Pedro Barroso do Nascimento</div>
+    <div class="livro">SchweserNotes Portfolio Management and Ethical and Professional Standards Book 5 – Kaplan Schweser</div>
+    <div class="livro">For Crying Out Loud – Leo Melamed</div>
+    <div class="livro">SchweserNotes Corporate Issuers and Equity Investments Book 3 – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Financial Markets and Products Book 3 Parte I – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Financial Statement Analysis Book 2 – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Fixed Income, Derivatives, and Alternative Investments Book 4 – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Foundations of Risk Management Book 1 – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Quantitative Analysis Book 2 Parte I – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Valuation and Risk Models Book 4 Parte I – Kaplan Schweser</div>
 
-  <section class="qr-section">
-    <img src="qrcode.png" alt="QR Code" />
-    <div>Escaneie com seu celular</div>
-  </section>
+    <div class="categoria">📙 Administração e Estratégia</div>
+    <div class="livro">Marketing Management – Philip Kotler</div>
 
-  <section class="catalogo">
-    <div class="categoria">
-      <h2>Mercado Financeiro</h2>
-      <div class="livro">LINCHEN, Newton; PERES, Tarcísio. *Lucrando com os Tubarões*.</div>
-      <div class="livro">KAPLAN SCHWESER. *SchweserNotes Book 1 a 5*.</div>
-    </div>
-
-    <div class="categoria">
-      <h2>Direito e Regulação</h2>
-      <div class="livro">BURANELLO, Renato. *Financiamento do Agronegócio*.</div>
-    </div>
-
-    <!-- Outras categorias e livros aqui -->
-  </section>
+    <div class="categoria">⚖️ Direito e Regulação</div>
+    <div class="livro">Financiamento do Agronegócio – Renato Buranello</div>
+    <div class="livro">Alienação Fiduciária – Melhim Namem Chalhub</div>
+  </div>
 
   <footer>
-    &copy; 2025 Biblioteca Artesanal. Todos os direitos reservados.
+    © 2025 Biblioteca Artesanal Investimentos
   </footer>
 </body>
 </html>
