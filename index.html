@@ -1,64 +1,144 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Catálogo de Livros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Livros - Biblioteca Artesanal</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f7f7f7;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b1e33;
+      color: #ffffff;
     }
-    h1 {
-      color: #333;
+
+    header {
+      background-color: #0b1e33;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #1e3d5f;
     }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo span {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #f58220;
+    }
+
+    .intro {
+      padding: 2rem;
+      max-width: 800px;
+    }
+
+    .intro h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .intro h1 span {
+      color: #f58220;
+    }
+
+    .intro p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .qr-section {
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .qr-section img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .qr-section div {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #f58220;
+    }
+
+    .catalogo {
+      padding: 2rem;
+    }
+
     .categoria {
-      margin-top: 20px;
+      margin-bottom: 2rem;
     }
+
+    .categoria h2 {
+      color: #f58220;
+      border-bottom: 1px solid #f58220;
+      padding-bottom: 0.5rem;
+    }
+
     .livro {
-      background: #fff;
-      padding: 10px;
-      margin: 5px 0;
-      border-radius: 5px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-left: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaaaaa;
+      border-top: 1px solid #1e3d5f;
     }
   </style>
 </head>
 <body>
-  <h1>Catálogo de Livros</h1>
+  <header>
+    <div class="logo">
+      <img src="logo-artesanal.png" alt="Logo Artesanal" />
+      <span>Biblioteca Artesanal</span>
+    </div>
+  </header>
 
-  <div class="categoria">
-    <h2>📘 Mercado Financeiro e Investimentos</h2>
-    <div class="livro">Lucrando com os Tubarões – Newton Linchen / Tarcísio Peres</div>
-    <div class="livro">Processo Sancionador nos Mercados Financeiro e de Capitais – João Pedro Barroso do Nascimento</div>
-    <div class="livro">SchweserNotes Portfolio Management and Ethical and Professional Standards Book 5 – Kaplan Schweser</div>
-    <div class="livro">For Crying Out Loud – Leo Melamed</div>
-    <div class="livro">SchweserNotes Corporate Issuers and Equity Investments Book 3 – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Financial Markets and Products Book 3 Parte I – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Financial Statement Analysis Book 2 – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Fixed Income, Derivatives, and Alternative Investments Book 4 – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Foundations of Risk Management Book 1 – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Quantitative Analysis Book 2 Parte I – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Valuation and Risk Models Book 4 Parte I – Kaplan Schweser</div>
-  </div>
+  <section class="intro">
+    <p>Os livros da Artesanal Investimentos, da sala de leitura, estão disponíveis para empréstimo aos colaboradores. Para solicitar o empréstimo, acesse o forms pelo QR code abaixo.</p>
+    <h1>Quer levar o livro? <span>Peça seu empréstimo aqui</span></h1>
+  </section>
 
-  <div class="categoria">
-    <h2>📚 Administração e Estratégia</h2>
-    <div class="livro">Marketing Management – Philip Kotler</div>
-  </div>
+  <section class="qr-section">
+    <img src="qrcode.png" alt="QR Code" />
+    <div>Escaneie com seu celular</div>
+  </section>
 
-  <div class="categoria">
-    <h2>⚖️ Direito e Regulação</h2>
-    <div class="livro">Financiamento do Agronegócio – Renato Buranello</div>
-    <div class="livro">Alienação Fiduciária – Melhim Namem Chalhub</div>
-  </div>
+  <section class="catalogo">
+    <div class="categoria">
+      <h2>Mercado Financeiro</h2>
+      <div class="livro">LINCHEN, Newton; PERES, Tarcísio. *Lucrando com os Tubarões*.</div>
+      <div class="livro">KAPLAN SCHWESER. *SchweserNotes Book 1 a 5*.</div>
+    </div>
 
-  <div class="categoria">
-    <h2>🎨 Outros (Arquitetura e Audiovisual)</h2>
-    <div class="livro">XII Grande Prêmio de Arquitetura Corporativa – Ricardo Aronovich</div>
-    <div class="livro">The Brazilian Audiovisual Industry – Steve Solot</div>
-  </div>
+    <div class="categoria">
+      <h2>Direito e Regulação</h2>
+      <div class="livro">BURANELLO, Renato. *Financiamento do Agronegócio*.</div>
+    </div>
+
+    <!-- Outras categorias e livros aqui -->
+  </section>
+
+  <footer>
+    &copy; 2025 Biblioteca Artesanal. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
