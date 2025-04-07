@@ -1,92 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catálogo de Livros - Biblioteca Artesanal</title>
+  <meta charset="UTF-8">
+  <title>Catálogo de Livros</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0b1f35;
+      padding: 0;
+      background-color: #0a1b2b;
+      font-family: Arial, sans-serif;
       color: white;
     }
-
-    .logo-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #0b1f35;
-      padding: 1rem 2rem;
-      border-bottom: 4px solid #ff6b00;
-    }
-
-    .logo-biblioteca {
-      height: 50px;
-    }
-
-    .logo-artesanal {
-      height: 40px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
+    header {
       text-align: center;
-      margin: 2rem 0 1rem 0;
-      color: white;
+      padding: 20px 0 10px;
+      border-bottom: 3px solid #ff7f11;
     }
-
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+    .logos img {
+      height: 60px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    h2 {
+      margin-top: 5px;
+      font-size: 1.2em;
+      color: #ff7f11;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
     .categoria {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-top: 2rem;
-      color: white;
+      margin-top: 20px;
     }
-
+    .categoria h3 {
+      background-color: #112b42;
+      padding: 10px;
+      border-left: 5px solid #ff7f11;
+      font-size: 1.2em;
+    }
     .livro {
-      background-color: white;
-      color: #000;
-      padding: 0.5rem 1rem;
-      margin: 0.3rem 1rem;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    .emoji {
-      font-size: 1.5rem;
-      margin-right: 0.5rem;
+      background-color: #0f2a41;
+      margin: 5px 0;
+      padding: 10px;
+      border-left: 5px solid #ff7f11;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="logo-biblioteca.png" alt="Logo Biblioteca Artesanal" class="logo-biblioteca" />
-      <img src="logo-artesanal.png" alt="Logo Artesanal Investimentos" class="logo-artesanal" />
-    </div>
-    <h1>Catálogo de Livros</h1>
-  </header>
 
-  <main>
-    <div class="categoria"><span class="emoji">📘</span>Mercado Financeiro e Investimentos</div>
-    <div class="livro">Lucrando com os Tubarões – Newton Linchen / Tarcísio Peres</div>
-    <div class="livro">Processo Sancionador nos Mercados Financeiro e de Capitais – João Pedro Barroso do Nascimento</div>
-    <div class="livro">SchweserNotes Portfolio Management and Ethical and Professional Standards Book 5 – Kaplan Schweser</div>
-    <div class="livro">For Crying Out Loud – Leo Melamed</div>
-    <div class="livro">SchweserNotes Corporate Issuers and Equity Investments Book 3 – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Financial Markets and Products Book 3 Parte I – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Financial Statement Analysis Book 2 – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Fixed Income, Derivatives, and Alternative Investments Book 4 – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Foundations of Risk Management Book 1 – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Quantitative Analysis Book 2 Parte I – Kaplan Schweser</div>
-    <div class="livro">SchweserNotes Valuation and Risk Models Book 4 Parte I – Kaplan Schweser</div>
+<header>
+  <div class="logos">
+    <img src="logo-artesanal.png" alt="Logo Artesanal">
+    <img src="logo-biblioteca.png" alt="Logo Biblioteca Artesanal">
+  </div>
+  <h1>Catálogo de Livros</h1>
+  <h2>Biblioteca Artesanal</h2>
+</header>
 
-    <div class="categoria"><span class="emoji">🧠</span>Administração e Estratégia</div>
-    <div class="livro">Marketing Management – Philip Kotler</div>
-
-    <div class="categoria"><span class="emoji">⚖️</span>Direito e Regulação</div>
-    <div class="livro">Financiamento do Agronegócio – Renato Buranello</div>
-    <div class="livro">Alienação Fiduciária – Melhim Namem Chalhub</div>
-  </main>
-</body>
-</html>
+<div class="container">
+  <!-- Aqui começa a lista de livros -->
