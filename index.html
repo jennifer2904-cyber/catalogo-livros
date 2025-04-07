@@ -12,93 +12,81 @@
       color: white;
     }
 
-    header {
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 4px solid #ff6d00;
+    .logo-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0b1f35;
+      padding: 1rem 2rem;
+      border-bottom: 4px solid #ff6b00;
+    }
+
+    .logo-biblioteca {
+      height: 50px;
+    }
+
+    .logo-artesanal {
+      height: 40px;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin: 0;
-    }
-
-    .subtitulo {
-      color: #ff6d00;
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      border-left: 5px solid #ff6d00;
-      padding-left: 0.5rem;
-      margin-top: 2rem;
-      color: #ffffff;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      background-color: #112f4d;
-      margin: 0.5rem 0;
-      padding: 0.8rem 1rem;
-      border-left: 4px solid #ff6d00;
-      border-radius: 6px;
-    }
-
-    footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #ccc;
+      margin: 2rem 0 1rem 0;
+      color: white;
+    }
+
+    .categoria {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 2rem;
+      color: white;
+    }
+
+    .livro {
+      background-color: white;
+      color: #000;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem 1rem;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .emoji {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
+    <div class="logo-container">
+      <img src="logo-biblioteca.png" alt="Logo Biblioteca Artesanal" class="logo-biblioteca" />
+      <img src="logo-artesanal.png" alt="Logo Artesanal Investimentos" class="logo-artesanal" />
+    </div>
     <h1>Catálogo de Livros</h1>
-    <div class="subtitulo">Biblioteca Artesanal</div>
   </header>
+
   <main>
-    <h2>📘 Mercado Financeiro e Investimentos</h2>
-    <ul>
-      <li>Lucrando com os Tubarões – Newton Linchen / Tarcísio Peres</li>
-      <li>Processo Sancionador nos Mercados Financeiro e de Capitais – João Pedro Barroso do Nascimento</li>
-      <li>SchweserNotes Portfolio Management and Ethical and Professional Standards Book 5 – Kaplan Schweser</li>
-      <li>For Crying Out Loud – Leo Melamed</li>
-      <li>SchweserNotes Corporate Issuers and Equity Investments Book 3 – Kaplan Schweser</li>
-      <li>SchweserNotes Financial Markets and Products Book 3 Parte I – Kaplan Schweser</li>
-      <li>SchweserNotes Financial Statement Analysis Book 2 – Kaplan Schweser</li>
-      <li>SchweserNotes Fixed Income, Derivatives, and Alternative Investments Book 4 – Kaplan Schweser</li>
-      <li>SchweserNotes Foundations of Risk Management Book 1 – Kaplan Schweser</li>
-      <li>SchweserNotes Quantitative Analysis Book 2 Parte I – Kaplan Schweser</li>
-      <li>SchweserNotes Valuation and Risk Models Book 4 Parte I – Kaplan Schweser</li>
-    </ul>
+    <div class="categoria"><span class="emoji">📘</span>Mercado Financeiro e Investimentos</div>
+    <div class="livro">Lucrando com os Tubarões – Newton Linchen / Tarcísio Peres</div>
+    <div class="livro">Processo Sancionador nos Mercados Financeiro e de Capitais – João Pedro Barroso do Nascimento</div>
+    <div class="livro">SchweserNotes Portfolio Management and Ethical and Professional Standards Book 5 – Kaplan Schweser</div>
+    <div class="livro">For Crying Out Loud – Leo Melamed</div>
+    <div class="livro">SchweserNotes Corporate Issuers and Equity Investments Book 3 – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Financial Markets and Products Book 3 Parte I – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Financial Statement Analysis Book 2 – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Fixed Income, Derivatives, and Alternative Investments Book 4 – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Foundations of Risk Management Book 1 – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Quantitative Analysis Book 2 Parte I – Kaplan Schweser</div>
+    <div class="livro">SchweserNotes Valuation and Risk Models Book 4 Parte I – Kaplan Schweser</div>
 
-    <h2>📙 Administração e Estratégia</h2>
-    <ul>
-      <li>Marketing Management – Philip Kotler</li>
-    </ul>
+    <div class="categoria"><span class="emoji">🧠</span>Administração e Estratégia</div>
+    <div class="livro">Marketing Management – Philip Kotler</div>
 
-    <h2>⚖️ Direito e Regulação</h2>
-    <ul>
-      <li>Financiamento do Agronegócio – Renato Buranello</li>
-      <li>Alienação Fiduciária – Melhim Namem Chalhub</li>
-    </ul>
+    <div class="categoria"><span class="emoji">⚖️</span>Direito e Regulação</div>
+    <div class="livro">Financiamento do Agronegócio – Renato Buranello</div>
+    <div class="livro">Alienação Fiduciária – Melhim Namem Chalhub</div>
   </main>
-  <footer>
-    © 2025 Biblioteca Artesanal • Catálogo em constante atualização
-  </footer>
 </body>
 </html>
