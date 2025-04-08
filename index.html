@@ -5,103 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biblioteca Artesanal</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #001f3f, #003366);
+      color: white;
     }
 
-    body {
-      background: linear-gradient(135deg, #0A0F2C, #1E2C52);
-      color: white;
-      min-height: 100vh;
+    header {
+      padding: 30px 60px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 40px;
+      justify-content: space-between;
+    }
+
+    .logos img {
+      height: 60px;
+      margin-right: 20px;
     }
 
     .container {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding: 80px 60px;
       gap: 40px;
-      max-width: 1200px;
-      width: 100%;
     }
 
-    .texto {
+    .text-content {
       flex: 1;
     }
 
-    .texto h1 {
-      font-size: 3rem;
+    .text-content h1 {
+      font-size: 48px;
+      font-weight: bold;
       line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .texto h1 span {
-      color: #FFA726; /* Laranja Artesanal */
-    }
-
-    .texto p {
-      font-size: 1.2rem;
       margin-bottom: 30px;
     }
 
-    .botao {
-      background-color: #FFA726;
-      color: #0A0F2C;
-      padding: 12px 30px;
+    .text-content h1 span {
+      color: #FFA500; /* laranja artesanal */
+    }
+
+    .text-content button {
+      background-color: #FFA500;
+      color: #000;
       border: none;
-      border-radius: 30px;
-      font-size: 1rem;
+      padding: 15px 30px;
+      font-size: 18px;
       font-weight: bold;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
-    .botao:hover {
-      background-color: #FF8F00;
-    }
-
-    .imagens {
+    .book-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
       flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    .imagens img {
-      max-width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    .book-images img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      object-fit: cover;
     }
 
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .text-content h1 {
+        font-size: 36px;
         text-align: center;
       }
-      .imagens {
-        margin-top: 20px;
+
+      .text-content button {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .book-images {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="texto">
-      <h1>Conheça os livros <br><span>da Biblioteca Artesanal</span></h1>
-      <p>Explore nosso acervo e encontre o livro ideal para sua jornada de aprendizado e desenvolvimento.</p>
-      <a href="lista.html"><button class="botao">Ver Livros</button></a>
+  <header>
+    <div class="logos">
+      <img src="logo-artesanal.svg" alt="Logo Artesanal" />
+      <img src="logo-biblioteca.svg" alt="Logo Biblioteca" />
     </div>
-    <div class="imagens">
-      <img src="livros-exemplo.jpg" alt="Livros da biblioteca" />
+  </header>
+
+  <main class="container">
+    <div class="text-content">
+      <h1>
+        Conheça os livros <br />
+        disponíveis <br />
+        na <span>Biblioteca Artesanal</span>
+      </h1>
+      <button onclick="location.href='livros.html'">Ver Livros</button>
     </div>
-  </div>
+
+    <div class="book-images">
+      <img src="https://via.placeholder.com/200x300?text=Livro+1" alt="Livro 1">
+      <img src="https://via.placeholder.com/200x300?text=Livro+2" alt="Livro 2">
+      <img src="https://via.placeholder.com/200x300?text=Livro+3" alt="Livro 3">
+      <img src="https://via.placeholder.com/200x300?text=Livro+4" alt="Livro 4">
+    </div>
+  </main>
 </body>
 </html>
 
