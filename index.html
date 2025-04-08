@@ -1,126 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biblioteca Artesanal</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #031d2c 0%, #071f2c 100%);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #061d2e 0%, #0a253b 100%);
       color: white;
-      overflow-x: hidden;
     }
 
     header {
       display: flex;
       justify-content: flex-end;
-      align-items: center;
-      padding: 20px;
-      border-bottom: 2px solid #f7931e;
+      padding: 1rem;
+      border-bottom: 2px solid #ff9000;
     }
 
-    .search-bar input {
-      padding: 10px;
-      border-radius: 5px;
+    input[type="text"] {
+      padding: 0.5rem;
+      border-radius: 6px;
       border: none;
     }
 
     .main-content {
-      text-align: center;
-      padding: 60px 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 6rem;
     }
 
-    .main-content h1 {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 20px;
+    .text-section {
+      max-width: 50%;
     }
 
-    .main-content p {
-      font-size: 18px;
-      margin-bottom: 30px;
+    .text-section h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
     }
 
-    .main-content button {
-      padding: 12px 30px;
-      font-size: 16px;
-      background-color: #f7931e;
-      color: #000;
+    .text-section p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .text-section button {
+      padding: 0.7rem 1.5rem;
+      background-color: #ff9000;
       border: none;
       border-radius: 10px;
+      font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s;
     }
 
-    .main-content button:hover {
-      background-color: #ffa733;
-    }
-
-    .book-covers {
+    .images-section {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 50px 20px;
+      gap: 1rem;
     }
 
-    .book {
-      width: 130px;
-      height: 200px;
-      background-color: #111;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-      transform: rotate(-5deg);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .book:hover {
-      transform: rotate(0deg) scale(1.05);
-      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-    }
-
-    .book img {
-      width: 100%;
-      height: 100%;
+    .images-section img {
+      width: 120px;
+      height: 180px;
       object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .images-section img:hover {
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #ccc;
+      padding: 2rem;
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="search-bar">
-      <input type="text" placeholder="Pesquisar tema do livro...">
-    </div>
+    <input type="text" placeholder="Pesquisar tema do livro...">
   </header>
 
-  <div class="main-content">
-    <h1>Conheça os livros disponíveis na Biblioteca Artesanal</h1>
-    <p>Acesse nosso acervo exclusivo com temas sobre finanças, direito, gestão e muito mais.</p>
-    <button onclick="window.location.href='URL_DA_LISTA_COMPLETA.html'">Ver livros</button>
-  </div>
-
-  <div class="book-covers">
-    <div class="book"><img src="livro1.jpg" alt="Livro 1"></div>
-    <div class="book"><img src="livro2.jpg" alt="Livro 2"></div>
-    <div class="book"><img src="livro3.jpg" alt="Livro 3"></div>
-    <div class="book"><img src="livro4.jpg" alt="Livro 4"></div>
-    <div class="book"><img src="livro5.jpg" alt="Livro 5"></div>
-  </div>
+  <section class="main-content">
+    <div class="text-section">
+      <h1>Conheça os livros disponíveis na Biblioteca Artesanal</h1>
+      <p>Acesse nosso acervo exclusivo com temas sobre finanças, direito, gestão e muito mais.</p>
+      <button>Ver livros</button>
+    </div>
+    <div class="images-section">
+      <img src="livro1.jpg" alt="Livro 1">
+      <img src="livro2.jpg" alt="Livro 2">
+      <img src="livro3.jpg" alt="Livro 3">
+      <img src="livro4.jpg" alt="Livro 4">
+      <img src="livro5.jpg" alt="Livro 5">
+    </div>
+  </section>
 
   <footer>
-    © 2025 Biblioteca Artesanal. Todos os direitos reservados.
+    &copy; 2025 Biblioteca Artesanal. Todos os direitos reservados.
   </footer>
-
 </body>
 </html>
