@@ -36,7 +36,8 @@
       .text {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        justify-content: center;
+        gap: 1rem;
       }
 
       .text h1 {
@@ -50,11 +51,6 @@
         display: block;
       }
 
-      .text p {
-        font-size: 1.1rem;
-        color: #e0e0e0;
-      }
-
       .text a {
         text-decoration: none;
         background: #fca311;
@@ -62,12 +58,18 @@
         padding: 0.8rem 2rem;
         border-radius: 999px;
         font-weight: bold;
-        align-self: flex-start;
+        align-self: center;
         transition: background 0.3s;
       }
 
       .text a:hover {
         background: #ffba3a;
+      }
+
+      .text p {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        text-align: center;
       }
 
       .images {
@@ -101,10 +103,15 @@
           Conheça os livros disponíveis<br />
           <span>na Biblioteca Artesanal</span>
         </h1>
-        <p>Explore títulos selecionados para apoiar seu crescimento profissional e pessoal.</p>
         <a href="#">Ver acervo</a>
+        <p>Explore títulos selecionados para apoiar seu crescimento profissional e pessoal.</p>
       </div>
       <div class="images">
         <img src="livro1.jpg" alt="Livro 1" />
         <img src="livro2.jpg" alt="Livro 2" />
-        <img src="livro3.jpg" alt="Livro
+        <img src="livro3.jpg" alt="Livro 3" />
+        <img src="livro4.jpg" alt="Livro 4" />
+      </div>
+    </div>
+  </body>
+</html>
