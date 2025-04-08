@@ -1,107 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biblioteca Artesanal</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #001F3F, #003366);
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0d1a2b, #1d2e48);
       color: white;
       height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
+    .hero {
       max-width: 1200px;
-      padding: 40px;
-    }
-
-    .text-section {
-      flex: 1;
-      text-align: center;
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: space-between;
+      padding: 40px;
+      gap: 60px;
     }
 
-    .text-section h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      font-weight: 300;
       line-height: 1.2;
+      margin: 0 0 20px 0;
     }
 
-    .text-section button {
-      background-color: #F4A300;
-      color: white;
+    .hero-text h1 span {
+      display: block;
+    }
+
+    .hero-text button {
+      background-color: #ffaa00;
       border: none;
-      padding: 15px 30px;
-      font-size: 1rem;
+      padding: 14px 28px;
+      font-size: 1.2rem;
+      color: #0d1a2b;
       font-weight: bold;
       border-radius: 8px;
-      margin: 20px 0;
       cursor: pointer;
+      margin-top: 30px;
     }
 
-    .text-section p {
-      font-size: 1.2rem;
-      color: #ddd;
-    }
-
-    .images-section {
+    .hero-images {
       flex: 1;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      padding-left: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
     }
 
-    .images-section img {
-      width: 100%;
+    .hero-images img {
+      width: 140px;
+      height: 200px;
+      object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
     @media (max-width: 768px) {
-      .container {
+      .hero {
         flex-direction: column;
+        text-align: center;
       }
 
-      .images-section {
-        grid-template-columns: 1fr 1fr;
-        padding-left: 0;
-        margin-top: 30px;
+      .hero-text h1 {
+        font-size: 2.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="text-section">
-      <h1>Conheça os livros disponíveis<br>na Biblioteca Artesanal</h1>
-      <button onclick="window.location.href='acervo.html'">Livros</button>
-      <p>Pesquise temas, autores ou categorias do seu interesse.</p>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>
+        <span>Conheça os</span>
+        <span>livros disponíveis</span>
+        <span>na Biblioteca Artesanal</span>
+      </h1>
+      <button onclick="location.href='catalogo.html'">Ver Livros</button>
     </div>
-    <div class="images-section">
-      <img src="caminho/para/imagem1.jpg" alt="Livro 1" />
-      <img src="caminho/para/imagem2.jpg" alt="Livro 2" />
-      <img src="caminho/para/imagem3.jpg" alt="Livro 3" />
-      <img src="caminho/para/imagem4.jpg" alt="Livro 4" />
+    <div class="hero-images">
+      <img src="livro1.jpg" alt="Livro 1">
+      <img src="livro2.jpg" alt="Livro 2">
+      <img src="livro3.jpg" alt="Livro 3">
+      <img src="livro4.jpg" alt="Livro 4">
     </div>
-  </div>
+  </section>
 </body>
 </html>
