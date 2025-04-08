@@ -15,10 +15,10 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #001F3F, #003366);
       color: white;
-      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
     }
 
     .container {
@@ -32,11 +32,10 @@
 
     .text-section {
       flex: 1;
-      text-align: center;
+      padding-right: 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
     }
 
     .text-section h1 {
@@ -55,6 +54,7 @@
       border-radius: 8px;
       margin: 20px 0;
       cursor: pointer;
+      align-self: flex-start;
     }
 
     .text-section p {
@@ -67,7 +67,6 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 15px;
-      padding-left: 40px;
     }
 
     .images-section img {
@@ -79,12 +78,21 @@
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+        text-align: center;
+      }
+
+      .text-section {
+        padding: 0;
+        align-items: center;
+      }
+
+      .text-section button {
+        align-self: center;
       }
 
       .images-section {
-        grid-template-columns: 1fr 1fr;
-        padding-left: 0;
         margin-top: 30px;
+        grid-template-columns: 1fr 1fr;
       }
     }
   </style>
