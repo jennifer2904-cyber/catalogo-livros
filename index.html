@@ -2,51 +2,120 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Catálogo de Livros</title>
+  <title>Biblioteca Artesanal</title>
   <style>
     body {
-      background-color: #0b1e33;
-      color: white;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: #0b1e33;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
     }
 
     .topo {
+      background: #0b1e33;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 40px;
-      padding: 20px;
-      border-bottom: 3px solid orange;
-      background-color: #0b1e33;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 4px solid orange;
     }
 
     .topo img {
-      height: 60px;
+      height: 50px;
     }
 
-    h1 {
+    .titulo-principal {
       text-align: center;
-      margin-top: 20px;
+      margin: 40px 0 10px;
+      font-size: 2.5em;
+      color: white;
     }
 
-    h2 {
+    .subtitulo {
       text-align: center;
+      font-size: 1.2em;
       color: orange;
-      margin-top: -10px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .container {
-      padding: 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
+      padding: 0 20px 60px;
+    }
+
+    .categoria {
+      font-size: 1.4em;
+      margin: 40px 0 20px;
+      border-left: 6px solid orange;
+      padding-left: 15px;
+      color: orange;
     }
 
     .livro {
-      background-color: #162d4e;
-      padding: 15px;
-      border-radius: 8px;
+      background-color: #132a4b;
+      padding: 20px;
+      border-radius: 12px;
       margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(255
+      box-shadow: 0 4px 12px rgba(255, 165, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    .livro:hover {
+      transform: scale(1.02);
+    }
+
+    .livro strong {
+      color: #ffa500;
+    }
+
+    footer {
+      background-color: #091728;
+      color: #bbb;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      border-top: 2px solid orange;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topo">
+    <img src="logo-artesanal.svg" alt="Logo Artesanal">
+    <img src="logo-biblioteca.svg" alt="Logo Biblioteca">
+  </header>
+
+  <h1 class="titulo-principal">Catálogo de Livros</h1>
+  <h2 class="subtitulo">Biblioteca Artesanal Investimentos</h2>
+
+  <div class="container">
+
+    <div class="categoria">📘 Mercado Financeiro e Investimentos</div>
+
+    <div class="livro">
+      <strong>Título:</strong> Lucrando com os Tubarões<br>
+      <strong>Autor:</strong> Newton Linchen / Tarcísio Peres<br>
+      <strong>Editora:</strong> [exemplo]<br>
+      <strong>Ano:</strong> [exemplo]<br>
+      <strong>Páginas:</strong> [exemplo]
+    </div>
+
+    <div class="categoria">⚖️ Direito e Regulação</div>
+
+    <div class="livro">
+      <strong>Título:</strong> Financiamento do Agronegócio<br>
+      <strong>Autor:</strong> Renato Buranello<br>
+      <strong>Editora:</strong> [exemplo]<br>
+      <strong>Ano:</strong> [exemplo]<br>
+      <strong>Páginas:</strong> [exemplo]
+    </div>
+
+  </div>
+
+  <footer>
+    Biblioteca Artesanal © 2025 — Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
