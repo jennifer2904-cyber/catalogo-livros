@@ -5,69 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biblioteca Artesanal</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f1c2e, #162940);
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0A0F2C, #1E2C52);
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
     }
 
     .container {
-      max-width: 800px;
-      padding: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      max-width: 1200px;
+      width: 100%;
     }
 
-    .title {
-      font-size: 2.5rem;
-      line-height: 1.3;
-      font-weight: 600;
+    .texto {
+      flex: 1;
     }
 
-    .title .highlight {
-      color: #ffa726; /* Laranja Artesanal */
+    .texto h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
     }
 
-    .button {
-      margin-top: 1.5rem;
-      padding: 0.75rem 2rem;
-      background-color: #ffa726;
-      color: #0f1c2e;
+    .texto h1 span {
+      color: #FFA726; /* Laranja Artesanal */
+    }
+
+    .texto p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .botao {
+      background-color: #FFA726;
+      color: #0A0F2C;
+      padding: 12px 30px;
       border: none;
       border-radius: 30px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
-    .button:hover {
-      background-color: #ff8f00;
+    .botao:hover {
+      background-color: #FF8F00;
     }
 
-    @media (max-width: 600px) {
-      .title {
-        font-size: 1.8rem;
-      }
-
-      .button {
-        font-size: 1rem;
-      }
+    .imagens {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1 class="title">
-      Conheça os livros disponíveis<br>
-      <span class="highlight">na Biblioteca Artesanal</span>
-    </h1>
-    <button class="button" onclick="window.location.href='acervo.html'">Ver livros</button>
-  </div>
-</body>
-</html>
+
+    .imagens img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
