@@ -2,123 +2,124 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biblioteca Artesanal</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #001f3f, #003366);
       color: white;
     }
 
     header {
-      padding: 30px 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logos img {
-      height: 60px;
-      margin-right: 20px;
-    }
-
-    .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 80px 60px;
-      gap: 40px;
+      padding: 1.5rem 2rem;
     }
 
-    .text-content {
+    header img {
+      height: 40px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+    }
+
+    .hero-text {
       flex: 1;
+      max-width: 600px;
+      padding: 1rem;
     }
 
-    .text-content h1 {
-      font-size: 48px;
-      font-weight: bold;
-      line-height: 1.2;
-      margin-bottom: 30px;
+    .hero-text h1 {
+      font-size: 2.8rem;
+      line-height: 1.3;
+      margin: 0;
     }
 
-    .text-content h1 span {
-      color: #FFA500; /* laranja artesanal */
+    .hero-text h1 .highlight {
+      color: #FFA500;
+      display: inline-block;
     }
 
-    .text-content button {
+    .hero-text h1 .line-break {
+      display: block;
+    }
+
+    .hero-text button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.8rem;
+      font-size: 1.1rem;
       background-color: #FFA500;
-      color: #000;
+      color: #001f3f;
       border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: bold;
       border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .book-images {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+    .hero-text button:hover {
+      background-color: #ffb733;
+    }
+
+    .hero-images {
       flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
     }
 
-    .book-images img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    .hero-images img {
+      width: 140px;
+      height: 200px;
       object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     @media (max-width: 768px) {
-      .container {
+      .hero {
         flex-direction: column;
-        padding: 40px 20px;
-      }
-
-      .text-content h1 {
-        font-size: 36px;
         text-align: center;
       }
 
-      .text-content button {
-        display: block;
-        margin: 0 auto;
+      .hero-text h1 {
+        font-size: 2.2rem;
       }
 
-      .book-images {
-        grid-template-columns: 1fr;
+      .hero-images {
+        margin-top: 2rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logos">
-      <img src="logo-artesanal.svg" alt="Logo Artesanal" />
-      <img src="logo-biblioteca.svg" alt="Logo Biblioteca" />
-    </div>
+    <img src="logo-artesanal.svg" alt="Logo Artesanal" />
+    <img src="logo-biblioteca.svg" alt="Logo Biblioteca" />
   </header>
 
-  <main class="container">
-    <div class="text-content">
+  <section class="hero">
+    <div class="hero-text">
       <h1>
-        Conheça os livros <br />
-        disponíveis <br />
-        na <span>Biblioteca Artesanal</span>
+        Conheça os livros disponíveis
+        <span class="line-break"><span class="highlight">na Biblioteca Artesanal</span></span>
       </h1>
-      <button onclick="location.href='livros.html'">Ver Livros</button>
+      <button onclick="window.location.href='acervo.html'">Ver acervo completo</button>
     </div>
-
-    <div class="book-images">
-      <img src="https://via.placeholder.com/200x300?text=Livro+1" alt="Livro 1">
-      <img src="https://via.placeholder.com/200x300?text=Livro+2" alt="Livro 2">
-      <img src="https://via.placeholder.com/200x300?text=Livro+3" alt="Livro 3">
-      <img src="https://via.placeholder.com/200x300?text=Livro+4" alt="Livro 4">
+    <div class="hero-images">
+      <img src="livro1.jpg" alt="Livro 1" />
+      <img src="livro2.jpg" alt="Livro 2" />
+      <img src="livro3.jpg" alt="Livro 3" />
+      <img src="livro4.jpg" alt="Livro 4" />
     </div>
-  </main>
+  </section>
 </body>
 </html>
-
