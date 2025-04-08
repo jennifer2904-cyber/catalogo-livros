@@ -1,125 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biblioteca Artesanal</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #001f3f, #003366);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #001F3F, #003366);
       color: white;
-    }
-
-    header {
+      height: 100vh;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 2rem;
-    }
-
-    header img {
-      height: 40px;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 4rem 2rem;
-    }
-
-    .hero-text {
-      flex: 1;
-      max-width: 600px;
-      padding: 1rem;
-    }
-
-    .hero-text h1 {
-      font-size: 2.8rem;
-      line-height: 1.3;
-      margin: 0;
-    }
-
-    .hero-text h1 .highlight {
-      color: #FFA500;
-      display: inline-block;
-    }
-
-    .hero-text h1 .line-break {
-      display: block;
-    }
-
-    .hero-text button {
-      margin-top: 2rem;
-      padding: 0.8rem 1.8rem;
-      font-size: 1.1rem;
-      background-color: #FFA500;
-      color: #001f3f;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .hero-text button:hover {
-      background-color: #ffb733;
-    }
-
-    .hero-images {
-      flex: 1;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
       justify-content: center;
+      align-items: center;
     }
 
-    .hero-images img {
-      width: 140px;
-      height: 200px;
-      object-fit: cover;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      padding: 40px;
+    }
+
+    .text-section {
+      flex: 1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-section h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .text-section button {
+      background-color: #F4A300;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+
+    .text-section p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    .images-section {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding-left: 40px;
+    }
+
+    .images-section img {
+      width: 100%;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
 
     @media (max-width: 768px) {
-      .hero {
+      .container {
         flex-direction: column;
-        text-align: center;
       }
 
-      .hero-text h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-images {
-        margin-top: 2rem;
+      .images-section {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 0;
+        margin-top: 30px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo-artesanal.svg" alt="Logo Artesanal" />
-    <img src="logo-biblioteca.svg" alt="Logo Biblioteca" />
-  </header>
-
-  <section class="hero">
-    <div class="hero-text">
-      <h1>
-        Conheça os livros disponíveis
-        <span class="line-break"><span class="highlight">na Biblioteca Artesanal</span></span>
-      </h1>
-      <button onclick="window.location.href='acervo.html'">Ver acervo completo</button>
+  <div class="container">
+    <div class="text-section">
+      <h1>Conheça os livros disponíveis<br>na Biblioteca Artesanal</h1>
+      <button onclick="window.location.href='acervo.html'">Livros</button>
+      <p>Pesquise temas, autores ou categorias do seu interesse.</p>
     </div>
-    <div class="hero-images">
-      <img src="livro1.jpg" alt="Livro 1" />
-      <img src="livro2.jpg" alt="Livro 2" />
-      <img src="livro3.jpg" alt="Livro 3" />
-      <img src="livro4.jpg" alt="Livro 4" />
+    <div class="images-section">
+      <img src="caminho/para/imagem1.jpg" alt="Livro 1" />
+      <img src="caminho/para/imagem2.jpg" alt="Livro 2" />
+      <img src="caminho/para/imagem3.jpg" alt="Livro 3" />
+      <img src="caminho/para/imagem4.jpg" alt="Livro 4" />
     </div>
-  </section>
+  </div>
 </body>
 </html>
