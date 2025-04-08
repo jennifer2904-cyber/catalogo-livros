@@ -5,64 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biblioteca Artesanal</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background: linear-gradient(to right, #051937, #004d7a);
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #001F3F, #003366);
       color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
     .container {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: 60px;
+      width: 90%;
       max-width: 1200px;
-      margin: 0 auto;
+      padding: 40px;
     }
 
     .text-section {
-      max-width: 50%;
+      flex: 1;
+      padding-right: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .text-section h1 {
-      font-size: 3em;
+      font-size: 3rem;
       margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .text-section button {
+      background-color: #F4A300;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 20px 0;
+      cursor: pointer;
+      align-self: flex-start;
     }
 
     .text-section p {
-      font-size: 1.3em;
-      line-height: 1.5;
+      font-size: 1.2rem;
+      color: #ddd;
     }
 
-    .cta-button {
-      margin-top: 30px;
-      padding: 15px 30px;
-      background-color: #f7b500;
-      color: #000;
-      font-weight: bold;
-      font-size: 1.1em;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #e6a700;
-    }
-
-    .images {
+    .images-section {
+      flex: 1;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
     }
 
-    .images img {
-      width: 200px;
-      height: auto;
+    .images-section img {
+      width: 100%;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
 
     @media (max-width: 768px) {
@@ -70,11 +80,19 @@
         flex-direction: column;
         text-align: center;
       }
-      .text-section, .images {
-        max-width: 100%;
+
+      .text-section {
+        padding: 0;
+        align-items: center;
       }
-      .images {
-        grid-template-columns: 1fr;
+
+      .text-section button {
+        align-self: center;
+      }
+
+      .images-section {
+        margin-top: 30px;
+        grid-template-columns: 1fr 1fr;
       }
     }
   </style>
@@ -82,15 +100,15 @@
 <body>
   <div class="container">
     <div class="text-section">
-      <h1>Conheça os livros disponíveis na Biblioteca Artesanal</h1>
-      <p>Explore o acervo cuidadosamente selecionado com obras sobre mercado financeiro, direito, administração e muito mais. Um espaço para crescer, aprender e compartilhar conhecimento.</p>
-      <a href="#acervo" class="cta-button">Livros</a>
+      <h1>Conheça os livros disponíveis<br>na Biblioteca Artesanal</h1>
+      <button onclick="window.location.href='acervo.html'">Livros</button>
+      <p>Pesquise temas, autores ou categorias do seu interesse.</p>
     </div>
-    <div class="images">
-      <img src="caminho/para/imagem1.jpg" alt="Livro 1">
-      <img src="caminho/para/imagem2.jpg" alt="Livro 2">
-      <img src="caminho/para/imagem3.jpg" alt="Livro 3">
-      <img src="caminho/para/imagem4.jpg" alt="Livro 4">
+    <div class="images-section">
+      <img src="caminho/para/imagem1.jpg" alt="Livro 1" />
+      <img src="caminho/para/imagem2.jpg" alt="Livro 2" />
+      <img src="caminho/para/imagem3.jpg" alt="Livro 3" />
+      <img src="caminho/para/imagem4.jpg" alt="Livro 4" />
     </div>
   </div>
 </body>
