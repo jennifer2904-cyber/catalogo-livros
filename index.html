@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,29 +7,19 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #061d2e 0%, #0a253b 100%);
+      font-family: 'Helvetica Neue', sans-serif;
+      background: linear-gradient(to right, #051937, #004d7a);
       color: white;
     }
 
-    header {
+    .container {
       display: flex;
-      justify-content: flex-end;
-      padding: 1rem;
-      border-bottom: 2px solid #ff9000;
-    }
-
-    input[type="text"] {
-      padding: 0.5rem;
-      border-radius: 6px;
-      border: none;
-    }
-
-    .main-content {
-      display: flex;
-      align-items: center;
+      flex-direction: row;
       justify-content: space-between;
-      padding: 4rem 6rem;
+      align-items: center;
+      padding: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .text-section {
@@ -37,71 +27,71 @@
     }
 
     .text-section h1 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
+      font-size: 3em;
+      margin-bottom: 20px;
     }
 
     .text-section p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+      font-size: 1.3em;
+      line-height: 1.5;
     }
 
-    .text-section button {
-      padding: 0.7rem 1.5rem;
-      background-color: #ff9000;
-      border: none;
-      border-radius: 10px;
+    .cta-button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      background-color: #f7b500;
+      color: #000;
       font-weight: bold;
-      cursor: pointer;
+      font-size: 1.1em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
     }
 
-    .images-section {
-      display: flex;
-      gap: 1rem;
+    .cta-button:hover {
+      background-color: #e6a700;
     }
 
-    .images-section img {
-      width: 120px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
+    .images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
-    .images-section img:hover {
-      transform: scale(1.05);
+    .images img {
+      width: 200px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.85rem;
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .text-section, .images {
+        max-width: 100%;
+      }
+      .images {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <input type="text" placeholder="Pesquisar tema do livro...">
-  </header>
-
-  <section class="main-content">
+  <div class="container">
     <div class="text-section">
       <h1>Conheça os livros disponíveis na Biblioteca Artesanal</h1>
-      <p>Acesse nosso acervo exclusivo com temas sobre finanças, direito, gestão e muito mais.</p>
-      <button>Ver livros</button>
+      <p>Explore o acervo cuidadosamente selecionado com obras sobre mercado financeiro, direito, administração e muito mais. Um espaço para crescer, aprender e compartilhar conhecimento.</p>
+      <a href="#acervo" class="cta-button">Livros</a>
     </div>
-    <div class="images-section">
-      <img src="livro1.jpg" alt="Livro 1">
-      <img src="livro2.jpg" alt="Livro 2">
-      <img src="livro3.jpg" alt="Livro 3">
-      <img src="livro4.jpg" alt="Livro 4">
-      <img src="livro5.jpg" alt="Livro 5">
+    <div class="images">
+      <img src="caminho/para/imagem1.jpg" alt="Livro 1">
+      <img src="caminho/para/imagem2.jpg" alt="Livro 2">
+      <img src="caminho/para/imagem3.jpg" alt="Livro 3">
+      <img src="caminho/para/imagem4.jpg" alt="Livro 4">
     </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Biblioteca Artesanal. Todos os direitos reservados.
-  </footer>
+  </div>
 </body>
 </html>
