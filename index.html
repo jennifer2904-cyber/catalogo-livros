@@ -1,147 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biblioteca Artesanal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background: linear-gradient(180deg, #071E3D 0%, #0B2447 100%);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0C2340 0%, #102A4C 100%);
       color: white;
-      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    header img {
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .orange {
+      color: #F77F00;
     }
 
     .container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding: 60px 100px;
-      position: relative;
+      padding: 60px 80px;
     }
 
-    .text-content {
-      max-width: 550px;
+    .text-section {
+      max-width: 600px;
     }
 
-    h1 {
-      font-size: 42px;
-      margin: 0 0 10px;
+    .text-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .highlight {
-      color: #ff7a01;
-    }
-
-    p {
-      font-size: 16px;
-      color: #cdd6f4;
-      margin: 20px 0;
-    }
-
-    .btn {
-      padding: 12px 24px;
-      background-color: #ff7a01;
-      color: white;
-      font-weight: 600;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #e06800;
-    }
-
-    .search {
-      position: absolute;
-      top: 40px;
-      right: 80px;
-    }
-
-    .search input {
-      padding: 10px 20px;
-      border-radius: 20px;
-      border: 2px solid #ff7a01;
-      background: transparent;
-      color: white;
-      outline: none;
+    .text-section p {
+      margin-bottom: 30px;
       font-size: 14px;
     }
 
-    .books {
-      display: flex;
+    .text-section .button {
+      background-color: #F77F00;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .image-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      max-width: 500px;
-      transform: rotate(-10deg);
+      padding-top: 40px;
     }
 
-    .book {
-      width: 120px;
-      height: 170px;
-      background-color: #102545;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-      background-size: cover;
-      background-position: center;
+    .image-section img {
+      width: 100px;
+      height: 140px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
     }
 
-    .logo {
+    .search-bar {
       position: absolute;
-      top: 30px;
-      left: 80px;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-
-    .logo-text {
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .logo-text span {
-      color: #ff7a01;
+      top: 20px;
+      right: 40px;
+      background-color: transparent;
+      border: 2px solid #F77F00;
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: white;
     }
   </style>
 </head>
-
 <body>
-  <div class="logo">
-    <img src="logo.png" alt="Logo" />
-    <div class="logo-text">Biblioteca <span>Artesanal</span></div>
-  </div>
-
-  <div class="search">
-    <input type="text" placeholder="Search...">
-  </div>
+  <header>
+    <img src="logo.png" alt="Logo">
+    <h1>Biblioteca <span class="orange">Artesanal</span></h1>
+    <input type="text" placeholder="" class="search-bar">
+  </header>
 
   <div class="container">
-    <div class="text-content">
-      <h1>Aqui, cada página abre um <span class="highlight">novo caminho.</span></h1>
+    <div class="text-section">
+      <h2>Aqui, cada página abre um <br><span class="orange">novo caminho.</span></h2>
       <p>Acesse nossa coleção completa e encontre o livro ideal para o seu momento</p>
-      <button class="btn">EXPLORAR O ACERVO</button>
+      <button class="button">EXPLORAR O ACERVO</button>
     </div>
 
-    <div class="books">
-      <div class="book" style="background-image: url('livro1.jpg');"></div>
-      <div class="book" style="background-image: url('livro2.jpg');"></div>
-      <div class="book" style="background-image: url('livro3.jpg');"></div>
-      <div class="book" style="background-image: url('livro4.jpg');"></div>
-      <div class="book" style="background-image: url('livro5.jpg');"></div>
-      <div class="book" style="background-image: url('livro6.jpg');"></div>
+    <div class="image-section">
+      <img src="livro1.png" alt="Livro 1">
+      <img src="livro2.png" alt="Livro 2">
+      <img src="livro3.png" alt="Livro 3">
+      <img src="livro4.png" alt="Livro 4">
+      <img src="livro5.png" alt="Livro 5">
+      <img src="livro6.png" alt="Livro 6">
     </div>
   </div>
 </body>
-
 </html>
