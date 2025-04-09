@@ -1,98 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Biblioteca Artesanal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #0C1C3C, #1E2A4F);
-      color: white;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 80px 60px;
-    }
-
-    .hero-text {
-      max-width: 50%;
-    }
-
-    .hero-text h1 {
-      font-size: 40px;
-      line-height: 1.2;
-    }
-
-    .hero-text h1 span {
-      color: #F8A51B;
-    }
-
-    .hero-text p {
-      font-size: 18px;
-      margin: 20px 0;
-    }
-
-    .hero-text a {
-      display: inline-block;
-      background-color: #F8A51B;
-      color: #0C1C3C;
-      padding: 14px 28px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
-    .books-showcase {
-      position: relative;
-      width: 450px;
-      height: 400px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .book {
-      width: 100px;
-      height: 150px;
-      object-fit: cover;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s;
-    }
-
-    .tilted-1 { transform: rotate(-15deg) translateX(-10px); z-index: 1; }
-    .tilted-2 { transform: rotate(-7deg) translateX(-5px); z-index: 2; }
-    .tilted-3 { transform: rotate(0deg); z-index: 3; }
-    .tilted-4 { transform: rotate(7deg) translateX(5px); z-index: 2; }
-    .tilted-5 { transform: rotate(15deg) translateX(10px); z-index: 1; }
-    .tilted-6 { transform: rotate(-10deg) translateY(20px); z-index: 1; }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca Artesanal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #041d2f 0%, #0a2640 100%);
+        color: white;
+        overflow-x: hidden;
       }
 
-      .hero-text {
-        max-width: 100%;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 120px;
+      }
 
+      .text-content {
+        max-width: 50%;
+      }
+
+      .text-content h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .text-content h1 span {
+        color: #f58220;
+      }
+
+      .text-content p {
+        font-size: 16px;
+        color: #cbd5e1;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        background-color: #f58220;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #e67314;
+      }
+
+      .books {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        transform: rotate(-8deg);
+      }
+
+      .books img {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s;
+      }
+
+      .books img:hover {
+        transform: scale(1.05) rotate(-8deg);
+      }
+
+      .search {
+        position: absolute;
+        top: 40px;
+        right: 60px;
+        background-color: transparent;
+        border: 2px solid #f58220;
+        border-radius: 999px;
+        padding: 8px 20px;
+        color: white;
+        font-size: 14px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" class="search" placeholder="Search..." />
+    <div class="container">
+      <div class="text-content">
+        <h1>
+          Aqui, cada página abre um<br />
+          <span>novo caminho.</span>
+        </h1>
+        <p>Acesse nossa coleção completa e encontre o livro ideal para o seu momento</p>
+        <button class="btn">EXPLORAR O ACERVO</button>
+      </div>
+      <div class="books">
+        <img src="/images/livro1.jpg" alt="Livro 1" />
+        <img src="/images/livro2.jpg" alt="Livro 2" />
+        <img src="/images/livro3.jpg" alt="Livro 3" />
+        <img src="/images/livro4.jpg" alt="Livro 4" />
+        <img src="/images/livro5.jpg" alt="Livro 5" />
+        <img src="/images/livro6.jpg" alt="Livro 6" />
+      </div>
+    </div>
+  </body>
+</html>
